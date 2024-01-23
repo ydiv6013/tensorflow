@@ -29,7 +29,7 @@ print(matrix)
 # check the dimension of the matrix
 print(a.ndim,matrix.ndim)
 
-# create a tensor : (3rd-order tensor)
+# create a tensor : (n-order tensor)
 tensor = tf.constant([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
 print(tensor)
 
