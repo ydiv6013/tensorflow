@@ -12,19 +12,22 @@ print(a,b)
 print(a.ndim)
 
 # create a vector 
+# Vector (1st-order tensor) :1-dimensional array, 
 vector = tf.constant([10,10])
-
+a = tf.constant([1,2,3,4,5,6])
+print("Vector",a,a.ndim)
 print(vector)
-
 # check dimension of the vector
 print(vector.ndim)
 
-# create a matrix(more then 1 dimension)
-matrix = tf.constant([[10,7],[7,10]])
+# create a matrix(more then 1 dimension) : 
+matrix = tf.constant([[1,2],[3,4]])
+a = tf.constant([[1,2,3],[3,4,5]])
+print(a)
 print(matrix)
 
 # check the dimension of the matrix
-print(matrix.ndim)
+print(a.ndim,matrix.ndim)
 
 # create a tensor
 tensor = tf.constant([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
