@@ -20,7 +20,7 @@ print(vector)
 # check dimension of the vector
 print(vector.ndim)
 
-# create a matrix(more then 1 dimension) : 
+# create a matrix(more then 1 dimension) : Matrix (2nd-order tensor)
 matrix = tf.constant([[1,2],[3,4]])
 a = tf.constant([[1,2,3],[3,4,5]])
 print(a)
@@ -29,7 +29,7 @@ print(matrix)
 # check the dimension of the matrix
 print(a.ndim,matrix.ndim)
 
-# create a tensor
+# create a tensor : (3rd-order tensor)
 tensor = tf.constant([[[1,2,3],[4,5,6]],[[7,8,9],[10,11,12]]])
 print(tensor)
 
