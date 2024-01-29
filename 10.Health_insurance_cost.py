@@ -48,3 +48,6 @@ print(y_test.mean(),y_test.median())
 # make a prediction
 y_pred_test = insurance_model.predict(X_test)
 print(y_pred_test)
+
+y_pred = insurance_model.predict([[25,"male",26.22,0,"no","northeast"]])
+print(y_pred)
