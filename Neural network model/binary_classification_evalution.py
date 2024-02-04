@@ -1,4 +1,5 @@
 from cProfile import label
+import dis
 from filecmp import cmp
 import keras
 import tensorflow as tf
@@ -6,7 +7,7 @@ import pandas as pd
 from sklearn.datasets import make_circles
 import matplotlib.pyplot as plt
 import numpy as np
-from sklearn.metrics import confusion_matrix
+from sklearn.metrics import confusion_matrix,ConfusionMatrixDisplay
 
 # Neural network to classify data points as red or blue (binary data) non linear
 
@@ -132,3 +133,17 @@ plt.show()
 
 
 
+# evolute the model
+loss,accuracy = binary_model.evaluate(X_test,y_test)
+print(f"Model loss on test set : {loss} ")
+print(f"model accuracy on test set : {(accuracy*100):.2f} %")
+
+
+# create a confusion matrix
+cm = confusion_matrix(y_true=y_test,y_pred=tf.round(y_pred_set))
+
+print(cm)
+
+display = ConfusionMatrixDisplay(cm)
+display.plot()
+plt.show()
