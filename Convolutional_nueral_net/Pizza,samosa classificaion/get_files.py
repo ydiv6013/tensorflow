@@ -2,19 +2,23 @@ import os
 import cv2 as cv
 
 path = "/Users/yogesh/pythoncode/datasets/pizza-samosa/pizza/"
-image = "2965.jpg"
-url = str(path) + str(image)
+img_name = "2965.jpg"
+url = str(path) + str(img_name)
+
 
 print(url)
+img = cv.imread(url,3)
 
-img = cv.imread(url)
-"""
+gray = cv.cvtColor(img,cv.COLOR_BGR2GRAY)
+print(img)
+
 if img is None :
     print("Opps something went wrong")
-else :"""
-cv.imshow("orignal image",image)
-cv.waitKey()
-cv.destroyAllWindows()
+else :
+    cv.imshow("orignal image",img)
+    cv.imshow("Gray  image",gray)
+    cv.waitKey()
+    cv.destroyAllWindows()
 
 class GetFiles :
     def __init__(self) -> None:
