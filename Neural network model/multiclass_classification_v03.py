@@ -101,6 +101,7 @@ lr_schedular = keras.callbacks.LearningRateScheduler(lambda epochs : 1e-3 * 10 *
 # one hot encode the label data
 test_label = tf.one_hot(test_label,depth=10)
 train_label = tf.one_hot(train_label,depth=10)
+
 # compile the model
 multiclass_model.compile(loss=keras.losses.CategoricalCrossentropy(),
                          optimizer=keras.optimizers.legacy.Adam(learning_rate=0.001),
@@ -146,7 +147,7 @@ plt.show()
 print("Ideal learning rate",10 **-3) 
 
 
-# -----------------prediction 
+# -----------------prediction------------------------------ 
 y_pred = multiclass_model.predict(test_data_norm)
 
 print("y_pred (normalised)",y_pred)
