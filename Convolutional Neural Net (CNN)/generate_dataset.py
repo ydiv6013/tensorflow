@@ -8,11 +8,12 @@ class GenerateDataset:
 
     def generate_dataset(self):
         # Dataset paths
-        path = "/Users/yogesh/pythoncode/datasets/pizza-samosa/"
-
+        path = "/Users/yogesh/pythoncode/datasets/pizza-samosa/small/"
+        #/Users/yogesh/pythoncode/datasets/pizza-samosa/small/test/pizza
         pizza_path = os.path.join(path,"pizza")
         samosa_path = os.path.join(path,"samosa")
-
+        print(pizza_path)
+        
         # Train set paths
         train_pizza_path = os.path.join(path, "train", "pizza")
         train_samosa_path = os.path.join(path, "train", "samosa")
@@ -26,7 +27,9 @@ class GenerateDataset:
         os.makedirs(train_samosa_path, exist_ok=True)
         os.makedirs(test_pizza_path, exist_ok=True)
         os.makedirs(test_samosa_path, exist_ok=True)
-
+      
+        print(train_pizza_path)
+        exit()
         # List all the images in pizza and samosa datasets
         all_pizza_images = [file for file in os.listdir(pizza_path) if file.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))]
         all_samosa_images = [file for file in os.listdir(samosa_path) if file.lower().endswith(('.jpg', '.jpeg', '.png', '.webp'))]

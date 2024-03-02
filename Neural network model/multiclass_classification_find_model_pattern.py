@@ -103,7 +103,6 @@ print(biases.shape)
 model_summary = multiclass_model.summary()
 
 print(model_summary)
-exit()
 # finding the ideal learning rate
 
 # create a learnig rate call back 
